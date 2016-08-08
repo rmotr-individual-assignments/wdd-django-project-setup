@@ -13,8 +13,8 @@ install:
   - pip install -r requirements/dev.txt
 
 script:
-  - "PYTHONPATH=. py.test ."
-  
+  - "PYTHONPATH=. DJANGO_SETTINGS_MODULE=demo_project.settings.base django-admin test demo_project"
+
 notifications:
   webhooks:
     urls:
